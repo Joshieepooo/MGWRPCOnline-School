@@ -1,0 +1,175 @@
+/* -------------
+     IMPORT
+-------------- */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+/* -------------
+    SHORTCUTS
+-------------- */
+:root {
+    --mgwrpcMain1: #8C52FF; 
+    --mgwrpcMain2: #FF914D;
+    --black1: #000;
+    --black2: #151515;
+    --black3: #303030;
+    --gray1: #222;
+    --gray2: #333;
+    --gray3: #444;
+    --white1: #ffffff;
+    --white2: #F2EFEB;
+    --white3: #dddddd;
+    --paracolor: #5e6c79;
+}
+
+/* -------------
+     RESETS
+-------------- */
+* {
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    background: var(--black1);
+    font-size: 16px;
+    color: var(--black1);
+}
+
+
+
+/* -------------
+      TERMS
+-------------- */
+.flex_align_justify {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    padding: 0 20px;
+}
+
+.tc_wrap {
+    width: 85%;
+    max-width: 100%;
+    height: 570px;
+    background: var(--black2);
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0 20px 0;
+}
+
+.tc_wrap .tabs_list {
+    width: 200px;
+    background: var(--white2);
+    height: 100%;
+}
+
+.tc_wrap .tabs_content {
+    width: calc(100% - 200px);
+    padding: 0 10px 0 20px;
+    height: 100%;
+    cursor: default;
+}
+
+.tc_wrap .tabs_content .tab_head,
+.tc_wrap .tabs_content .tab_foot{
+    color: var(--mgwrpcMain1);
+    padding: 25px 0;
+    height: 70px;
+}
+
+.tc_wrap .tabs_content .tab_head{
+    text-align: center;
+}
+
+.tc_wrap .tabs_content .tab_body{
+    height: calc(100% - 140px);
+    overflow: auto;
+}
+
+.tc_wrap .tabs_list ul{
+    padding: 70px 20px;
+    text-align: right;
+}
+
+.tc_wrap .tabs_list ul li{
+    padding: 8px 0;
+    position: relative;
+    margin-bottom: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+.tc_wrap .tabs_list ul li:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 5px;
+    height: 100%;
+    background: var(--black2);
+    opacity: 0;
+    transition: all 0.5s ease;
+    border-radius: 5px 0 0 5px;
+}
+
+.tc_wrap .tabs_list ul li.active,
+.tc_wrap .tabs_list ul li:hover{
+    color: var(--black1);
+}
+
+.tc_wrap .tabs_list ul li.active:before{
+    opacity: 1;
+}
+
+.tc_wrap .tabs_content .tab_body .tab_item h3{
+    padding-top: 10px;
+    margin-bottom: 20px;
+    color: var(--mgwrpcMain1);
+    z-index: 1;
+}
+
+.tc_wrap .tabs_content .tab_body .tab_item p{
+    margin-bottom: 20px;
+    text-align: left;
+    margin-right: 20px;
+    color: var(--white1);
+}
+
+.tc_wrap .tabs_content .tab_body .tab_item.active{
+    display: block !important;
+}
+
+/* -------------
+   BREAKPOINTS
+-------------- */
+@media(max-width: 768px){
+    .tc_wrap{
+        width: 95%;
+    }
+
+    .tc_wrap .tabs_list{
+        width: 180px;
+    }
+
+    .tc_wrap .tabs_content{
+        width: calc(100% - 120px);
+        padding: 0 0 0 20px;
+    }
+
+    .tc_wrap .tabs_content .tab_head{
+        text-align: left;
+        margin-bottom: 30px;
+    }
+
+    .tc_wrap .tabs_content .tab_body .tab_item p{
+        margin-right: 10px;
+    }
+
+    .tc_wrap .tabs_list ul{
+        padding: 20px 20px;
+    }
+}

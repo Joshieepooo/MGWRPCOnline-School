@@ -1,0 +1,1098 @@
+/* ------------
+   SHORTCUTS
+------------ */
+:root {
+    --mgwrpcMain1: #8C52FF; 
+    --mgwrpcMain2: #FF914D;
+    --black1: #000;
+    --black2: #151515;
+    --black3: #303030;
+    --gray1: #222;
+    --gray2: #333;
+    --gray3: #444;
+    --white1: #ffffff;
+    --white2: #F2EFEB;
+    --white3: #dddddd;
+    --paracolor: #5e6c79;
+}
+
+
+
+/* -------------
+   PROMOTION
+------------- */ 
+.slider-container {
+    position: relative;
+    z-index: 1; 
+    padding: 0 0 50px 0;
+}
+
+.slider {
+    width: calc(100vw - 20px); 
+    height: calc(100vh - 80px); 
+    margin: auto;
+    position: relative;
+    overflow: hidden; 
+}
+
+.slider .list {
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+
+.slider .list .item {
+    width: 100%; 
+    height: 95%; 
+    flex-shrink: 0;
+}
+
+.slider .list img {
+    width: 100%; 
+    height: auto; 
+    max-height: 100%; 
+    object-fit: contain; 
+    display: block; 
+    margin: auto;
+}
+
+.slider .buttons,
+.slider .dots {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.slider .buttons {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider .buttons button {
+    width: 50px;
+    height: 50px;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.slider .dots {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.slider .dots li {
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.slider .dots li.active {
+    width: 30px;
+}
+
+.slider .item img {
+    width: 100%; 
+    height: auto; 
+    display: block;
+}
+
+.slider .list .item {
+    position: relative;
+}
+
+.Save-Button1 {
+    background-color: var(--black1);
+    color: var(--white1);
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+    margin-left: 100px;
+    margin-right: 100px;
+    cursor: pointer;
+}
+
+.Save-Button1:hover {
+    background-color: var(--white1);
+    color: var(--black1);
+    transform: scale(1.1);
+    border: 1px solid var(--black1);
+}
+
+/* -------------
+  CMS PROMOTION
+------------- */ 
+#openPopup {
+    font-size: 16px;
+    margin-left: 50%;
+	transform: translate(-50%, 0);
+	background-color: var(--black2);
+	color: var(--white1);
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 15px 30px;
+	border-radius: 10px;
+	transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+#openPopup:hover {
+    background-color: transparent;
+	border: 2px solid var(--black3);
+	cursor: pointer;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 2; 
+    display: none;
+}
+
+#popup {
+	width: 35%;
+	height: 15%;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff; 
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9); 
+    z-index: 100; 
+    max-width: 100%; 
+    max-height: 100%; 
+    overflow-y: auto; 
+    display: none; 
+	text-align: center;
+	align-content: center;
+}
+
+#updatephotohead {
+    padding-top: 110px;
+    font-size: 3em;
+    color: var(--black1);
+	text-align: center;
+	max-width: 700px;
+	margin: auto auto 20px;
+    margin-top: -100px;
+    cursor: default;
+}
+
+#closePopup {
+    font-size: 16px;
+	background-color: var(--black2);
+	color: var(--white1);
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 15px 30px;
+	border-radius: 10px;
+	transition: 0.3s;
+    margin-top: 20px;
+}
+
+#closePopup:hover {
+    background-color: transparent;
+	border: 2px solid var(--black3);
+    color: var(--black1);
+	cursor: pointer;
+}
+
+label[for="photoInput"],
+label[for="photoInput2"],
+label[for="photoInput3"],
+label[for="photoInput4"],
+label[for="photoInput5"] {
+    font-size: 16px;
+    color: var(--black1);
+    margin-right: 10px;
+    text-decoration: none;
+    cursor: pointer;
+	border: 1px solid var(--black1);
+	padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+	border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+label[for="photoInput"]:hover,
+label[for="photoInput2"]:hover,
+label[for="photoInput3"]:hover,
+label[for="photoInput4"]:hover,
+label[for="photoInput5"]:hover {
+    background-color: var(--mgwrpcMain1);
+    color: var(--white1);
+}
+	
+
+#photoInput,
+#photoInput2,
+#photoInput3,
+#photoInput4,
+#photoInput5 {
+    display: none; 
+	
+}
+
+#fileName1,
+#fileName2,
+#fileName3,
+#fileName4,
+#fileName5 {
+    font-size: 16px;
+    color: var(--mgwrpcMain1);
+    margin-right: 20px;
+	
+}
+
+button[name="submit"],
+button[name="submit2"],
+button[name="submit3"],
+button[name="submit4"],
+button[name="submit5"] {
+    font-size: 14px;
+	background-color: var(--black2);
+	color: var(--white1);
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 10px;
+	transition: 0.3s;
+    margin-top: 20px;
+	
+}
+
+button[name="submit"]:hover,
+button[name="submit2"]:hover,
+button[name="submit3"]:hover,
+button[name="submit4"]:hover,
+button[name="submit5"]:hover {
+    background-color: transparent;
+	border: 2px solid var(--black3);
+    color: var(--black1);
+	cursor: pointer;
+}
+
+/* -------------
+   BREAKPOINTS
+------------- */ 
+@media screen and (max-width: 1750px) {
+    .slider{
+        height: 820px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .slider{
+        height: 800px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .slider{
+        height: 760px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .slider{
+        height: 710px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .slider{
+        height: 660px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .slider{
+        height: 610px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .slider{
+        height: 560px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .slider{
+        height: 510px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .slider{
+        height: 400px;
+    }
+}
+
+
+
+/* -------------
+    ABOUT US
+-------------- */
+.about {
+    height: 100vh;
+    width: 100%;
+    background: var(--black1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -80px;
+    padding-top: 10px;
+}
+
+.about .main .image-container {
+    width: 580px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.about .main .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.about .main .image-container img:hover {
+    transform: scale(1.06); 
+}
+
+.all-text {
+    width: 600px;
+    max-width: 100%;
+    padding: 0 30px;
+}
+
+.main {
+    width: 1290px;
+    max-width: 95%;
+    margin: 0 100;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.all-text h4 {
+    font-size: 18px;
+    color: var(--white1);
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-top: 10px;
+    cursor: default;
+}
+
+.all-text h1 {
+    font-family: 'Ethnocentric', sans-serif;
+    font-size: 65px;
+    color: var(--white1);
+    font-weight: 700;
+    margin-bottom: 20px;
+    cursor: default;
+}
+
+.all-text p {
+    font-size: 16px;
+    color: var(--paracolor);
+    line-height: 30px;
+    margin-bottom: 35px;
+    text-align: justify;
+    cursor: default;
+}
+
+.abouteditbutton {
+    background: var(--black2);
+    padding: 20px 32px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--white1);
+    border: none;
+    outline: none;
+    box-shadow: 0px 16px 32px 0px rgb(0 0 0 / 6%);
+    margin-right: 20px;
+}
+
+.abouteditbutton:hover {
+    background-color: var(--black3);
+    color: var(--white1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* -------------
+  CMS ABOUT US
+-------------- */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 2; 
+    display: none;
+    padding-top: 1000px;
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 600px;
+    background-color: #fefefe;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9); 
+    z-index: 100; 
+    overflow-y: auto; 
+    margin: 15% auto;
+    padding: 20px;
+    text-align: center;
+	align-content: center;
+}
+    
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#aboutHead {
+    padding-top: 110px;
+    font-size: 3em;
+    color: var(--black1);
+	text-align: center;
+	max-width: 700px;
+	margin: auto auto 20px;
+    margin-top: -100px;
+    cursor: default;
+}
+
+#comInfo {
+    font-size: 20px;
+    color: var(--black1);
+    margin-right: 10px;
+    text-decoration: none;
+    pointer-events: none;
+}
+
+#popupCompanyInfo {
+    width: 100%;
+    max-width: 600px;
+    border: none;
+    font-size: .9rem;
+    padding: 1em;
+    outline: none;
+    background-color: var(--black2);    
+    color: var(--white1);
+    border-radius: 10px;
+    border: 1px solid rgb(53, 53, 53);
+    margin-bottom: 1em;
+	resize: vertical;
+}
+
+label[for="ABTPHOTO"] {
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid var(--black1);
+	padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+	border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+label[for="ABTPHOTO"]:hover {
+    background-color: var(--mgwrpcMain1);
+    color: var(--white1);
+}
+
+#ABTPHOTO {
+    display: none; 
+}
+
+#aboutfileName {
+    font-size: 16px;
+    color: var(--mgwrpcMain1);
+    margin-right: 20px;
+}
+
+button[name="ABTPHOTOSUB"] {
+    font-size: 14px;
+	background-color: var(--black2);
+	color: var(--white1);
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 10px;
+	transition: 0.3s;
+    margin-top: 20px;
+}
+
+button[name="ABTPHOTOSUB"]:hover {
+    background-color: transparent;
+	border: 2px solid var(--black3);
+    color: var(--black1);
+	cursor: pointer;
+}
+
+#aboutSaveButton {
+    font-size: 16px;
+	background-color: var(--black2);
+	color: var(--white1);
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 15px 30px;
+	border-radius: 10px;
+	transition: 0.3s;
+    margin-top: 20px;
+}
+
+#aboutSaveButton:hover {
+    background-color: transparent;
+	border: 2px solid var(--black3);
+    color: var(--black1);
+	cursor: pointer;
+}
+
+#aboutBackButton {
+    font-size: 16px;
+	background-color: var(--black2);
+	color: var(--white1);
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 15px 30px;
+	border-radius: 10px;
+	transition: 0.3s;
+    margin-top: 20px;
+}
+
+#aboutBackButton:hover {
+    background-color: transparent;
+	border: 2px solid var(--black3);
+    color: var(--black1);
+	cursor: pointer;
+}
+
+/* -------------
+   BREAKPOINTS
+-------------- */
+@media screen and (max-width: 1242px) {
+    .about {
+        width: 100%;
+        height: auto;
+        padding: 80px 0;
+    }
+
+    .all-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .all-text h1 {
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* -------------
+    PRICELIST
+-------------- */
+.heading {
+	padding-top: 110px;
+    font-size: 3em;
+    color: var(--white1);
+	text-align: center;
+	max-width: 700px;
+	margin: auto auto 20px;
+    margin-top: -100px;
+	margin-bottom: 10px;
+    cursor: default;
+}
+
+.wrapper {
+    background: var(--black1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+.content-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 1000px;
+}
+
+.card {
+    min-height: 220px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--black2);
+    margin: 10px 10px;
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+
+.card i {
+    margin: 20px;
+    color: var(--paracolor);
+}
+
+.card h2 {
+    margin-bottom: 12px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--white1);
+    z-index: 2;
+    transition: all 0.3s;
+    cursor: default;
+}
+
+.card p {
+    color: var(--paracolor);
+    text-align: center;
+    width: 600px;
+    transition: all 0.3s;
+    cursor: default;
+}
+
+.card:hover h2,
+.card:hover p,
+.card:hover i {
+    color: var(--white1);
+}
+
+.card:nth-child(1),
+.card:nth-child(2),
+.card:nth-child(3),
+.card:nth-child(4) {
+    position: relative;
+    transition: all 0.3s;
+    margin-bottom: 10px;
+}
+
+.card:nth-child(1):hover,
+.card:nth-child(2):hover,
+.card:nth-child(3):hover,
+.card:nth-child(4):hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px var(--white1);
+}
+
+/* --------------
+  CMS PRICELIST
+-------------- */
+label[for="fileToUpload1"],
+label[for="fileToUpload2"],
+label[for="fileToUpload3"],
+label[for="fileToUpload4"] {
+    font-size: 16px;
+    color: var(--white1);
+    margin-right: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#fileToUpload1,
+#fileToUpload2,
+#fileToUpload3,
+#fileToUpload4 {
+    display: none; 
+}
+
+#pricelistfileupload1,
+#pricelistfileupload2,
+#pricelistfileupload3,
+#pricelistfileupload4 {
+    font-size: 16px;
+    color: var(--mgwrpcMain1);
+    margin-right: 20px;
+}
+
+button[name="prclstbtn1"],
+button[name="prclstbtn2"],
+button[name="prclstbtn3"],
+button[name="prclstbtn4"] {
+    font-size: 14px;
+	background-color: var(--black1);
+	color: var(--white1);
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 10px;
+	transition: 0.3s;
+    margin-top: 20px;
+}
+
+button[name="prclstbtn1"]:hover,
+button[name="prclstbtn2"]:hover,
+button[name="prclstbtn3"]:hover,
+button[name="prclstbtn4"]:hover {
+    background-color: transparent;
+	border: 2px solid var(--white1);
+    color: var(--mgwrpcMain1);
+	cursor: pointer;
+}
+
+/* -------------
+   BREAKPOINTS
+-------------- */
+@media screen and (max-width: 1250px) {
+    .content-box {
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        text-align: center;
+        width: 1200px;
+		margin: 10px 10px 0px 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        text-align: center;
+        width: 99%;
+    }
+
+	.card p {
+		width: 350px;
+	}
+}
+
+
+
+/* -------------
+      FAQS
+-------------- */
+.heading {
+	padding-top: 110px;
+    font-size: 3em;
+    color: var(--white1);
+	text-align: center;
+	max-width: 700px;
+	margin: auto auto 20px;
+    margin-top: -100px;
+    cursor: default;
+}
+
+.faqs {
+    width: 100%;
+	height: 1%;
+	background-color: var(--black1);
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    margin-top: 150px;
+    margin-bottom: 225px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1600px;
+    margin-top: -50px;
+    padding-bottom: 5px;
+}
+
+.list-items {
+    background-color: var(--black2);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding: 1.3rem;
+    box-shadow: .5rem 2px .5rem rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+
+.list-link {
+    font-size: 20px;
+    color: var(--white1);
+    text-decoration: none;
+    background-color: var(--black2);
+    border: none;
+    outline: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    cursor: pointer;
+}
+
+.list-link i {
+    color: var(--white1);
+    padding: .5rem;
+	margin-left: 20px;
+}
+
+.list-link .ion-md-remove {
+    display: none;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--black3);
+    transition: max-height 650ms;
+	margin-top: 10px;
+    cursor: default;
+}
+
+.answer:before {
+    content: "";
+    position: absolute;
+    width: .6rem;
+    height: 95%;
+    background-color: var(--mgwrpcMain2);
+    top: 50%;
+    left: 4px;
+    transform: translateY(-50%);
+	border-radius: 5%
+}
+
+.answer p{
+    font-size: 18px;
+    color: var(--mgwrpcMain2);
+    padding: 2rem;
+}
+
+.list-items:target  .answer {
+    max-height: 20rem;
+}
+
+.list-items:target .list-link .ion-md-add {
+    display: none;
+}
+
+.list-items:target .list-link .ion-md-remove {
+    display: block;
+}
+
+.edit2-btn {
+    background-color: var(--black1);
+    color: var(--white1);
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+    margin-left: 100px;
+    margin-right: 100px;
+    cursor: pointer;
+}
+
+.edit2-btn:hover {
+    background-color: var(--white1);
+    color: var(--black1);
+    transform: scale(1.1);
+    border: 1px solid var(--black1);
+}
+
+
+
+.save3-btn {
+    background-color: var(--black1);
+    color: var(--white1);
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+    margin-left: 100px;
+    margin-right: 100px;
+    cursor: pointer;
+}
+
+.save3-btn:hover {
+    background-color: var(--white1);
+    color: var(--black1);
+    transform: scale(1.1);
+    border: 1px solid var(--black1);
+}
+
+.hidden {
+    display: none;
+}
+
+/*---------------
+    CMS FAQS
+---------------*/
+#addFaqForm {
+	width: 30%;
+	height: 12%;
+    position: fixed;
+    top: 93.8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff; 
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9); 
+    z-index: 100; 
+    max-width: 100%; 
+    max-height: 100%; 
+    overflow-y: auto; 
+    display: none; 
+	text-align: center;
+	align-content: center;
+}
+
+#toggleFormButton {
+    margin-right: 20px;
+}
+
+#toggleFormButton, #toggleDeleteButtons {
+    font-size: 16px;
+	background-color: var(--black2);
+	color: var(--white1);
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 15px 30px;
+	border-radius: 10px;
+	transition: 0.3s;
+    margin-bottom: 20px;
+}
+
+#toggleFormButton:hover, #toggleDeleteButtons:hover {
+    background-color: transparent;
+	border: 2px solid var(--black3);
+    color: var(--white1);
+	cursor: pointer;
+}
+
+input[type="text"],
+textarea {
+    color: var(--black1);
+    margin-right: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    font-size: 14px;
+	background-color: var(--black2);
+	color: var(--white1);
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 10px;
+	transition: 0.3s;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: transparent;
+	border: 2px solid var(--black3);
+    color: var(--black1);
+	cursor: pointer;
+}
+
+#new_question {
+    width: 90%;
+    max-width: 600px;
+    border: none;
+    font-size: .9rem;
+    padding: 1em;
+    outline: none;
+    background-color: var(--black2);    
+    color: var(--white1);
+    border-radius: 10px;
+    border: 1px solid rgb(53, 53, 53);
+    margin-bottom: 1em;
+	resize: vertical;
+}
+
+#new_answer {
+    width: 90%;
+    max-width: 600px;
+    border: none;
+    font-size: .9rem;
+    padding: 1em;
+    outline: none;
+    background-color: var(--black2);    
+    color: var(--white1);
+    border-radius: 10px;
+    border: 1px solid rgb(53, 53, 53);
+    margin-bottom: 1em;
+	resize: vertical;
+}
+
+/* -------------
+   BREAKPOINTS
+-------------- */
+@media(max-width: 1650px) {
+	.container {
+         margin: -120px 20px -80px 20px;
+    }
+	
+    .list {
+        padding: 1.5rem;
+    }
+}
+
+@media(max-width: 980px) {
+    .container {
+         margin: -120px 20px -80px 20px;
+    }
+}
+
+@media (max-width: 610px) {
+    .container {
+        margin: -120px 20px -80px 20px;
+    }
+
+    .list {
+        padding: 1rem;
+    }
+}

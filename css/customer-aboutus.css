@@ -1,0 +1,379 @@
+/* -------------
+    SHORTCUTS
+-------------- */
+:root {
+    --mgwrpcMain1: #8C52FF; 
+    --mgwrpcMain2: #FF914D;
+    --black1: #000;
+    --black2: #151515;
+    --black3: #303030;
+    --gray1: #222;
+    --gray2: #333;
+    --gray3: #444;
+    --white1: #ffffff;
+    --white2: #F2EFEB;
+    --white3: #dddddd;
+    --paracolor: #5e6c79;
+    --mission: #3DA8DA;
+    --vission: #8FC800;
+    --coreValues: #F6A800;
+}
+
+
+
+/* -------------
+    ABOUT US
+-------------- */
+.about {
+    height: 100vh;
+    width: 100%;
+    background: var(--black1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -80px;
+    padding-top: 10px;
+}
+
+.about .main .image-container {
+    width: 580px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.about .main .image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.about .main .image-container img:hover {
+    transform: scale(1.06); 
+}
+
+.all-text {
+    width: 600px;
+    max-width: 100%;
+    padding: 0 30px;
+}
+
+.main {
+    width: 1290px;
+    max-width: 95%;
+    margin: 0 100;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.all-text h4 {
+    font-size: 18px;
+    color: var(--white1);
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-top: 10px;
+    cursor: default;
+}
+
+.all-text h1 {
+    font-family: 'Ethnocentric', sans-serif;
+    font-size: 65px;
+    color: var(--white1);
+    font-weight: 700;
+    margin-bottom: 20px;
+    cursor: default;
+}
+
+.all-text p {
+    font-size: 16px;
+    color: var(--paracolor);
+    line-height: 30px;
+    margin-bottom: 35px;
+    text-align: justify;
+    cursor: default;
+}
+
+.btn button {
+    background: var(--black2);
+    padding: 20px 32px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--white1);
+    border: none;
+    outline: none;
+    box-shadow: 0px 16px 32px 0px rgb(0 0 0 / 6%);
+    margin-right: 20px;
+}
+
+.btn button:hover {
+    background-color: var(--black3);
+    color: var(--white1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn .btn2 {
+    background: var(--white1);
+    color: #000;
+}
+
+/* -------------
+   BREAKPOINTS
+-------------- */
+@media screen and (max-width: 1242px) {
+    .about {
+        width: 100%;
+        height: auto;
+        padding: 80px 0;
+    }
+
+    .all-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .all-text h1 {
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .btn button {
+        margin-right: 10px;
+    }
+}
+
+
+
+/* -------------
+    M, V, CV
+-------------- */
+.mvcv-block {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: var(--black2);
+}
+
+.mvcv-container .box {
+    position: relative;
+    width: 480px;
+    height: 500px;
+    padding: 40px;
+    background: var(--black1);
+    color: var(--white1);
+    border-radius: 10px;
+    margin: 60px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+    cursor: default;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.mvcv-container .box:hover {
+    animation: bounce 1.8s infinite ease-in-out;
+    transform-origin: center bottom;
+}
+
+.mvcv-container .box .icon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    color: var(--white1);
+    background: var(--black2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 40px;
+    font-weight: 700;
+    transition: 1s;
+}
+
+.mvcv-container .box:nth-child(1) .icon {
+    box-shadow: 0 0 0 0 var(--mission);
+    background-color: var(--mission);
+}
+
+.mvcv-container .box:nth-child(1):hover .icon {
+    color: var(--black1);
+    box-shadow: 0 0 0 500px var(--mission);
+}
+
+.mvcv-container .box:nth-child(2) .icon {
+    box-shadow: 0 0 0 0 var(--vission);
+    background-color: var(--vission);
+}
+
+.mvcv-container .box:nth-child(2):hover .icon {
+    color: var(--black1);
+    box-shadow: 0 0 0 500px var(--vission);
+}
+
+.mvcv-container .box:nth-child(3) .icon {
+    box-shadow: 0 0 0 0 var(--coreValues);
+    background-color: var(--coreValues);
+}
+
+.mvcv-container .box:nth-child(3):hover .icon {
+    color: var(--black1);
+    box-shadow: 0 0 0 500px var(--coreValues);
+}
+
+.mvcv-container .box .content {
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.mvcv-container .box:nth-child(1) .content h3 {
+    color: var(--mission);
+}
+
+.mvcv-container .box:nth-child(1):hover .content h3 {
+    color: var(--black1);
+}
+
+.mvcv-container .box:nth-child(2) .content h3 {
+    color: var(--vission);
+}
+
+.mvcv-container .box:nth-child(2):hover .content h3 {
+    color: var(--black1);
+}
+
+.mvcv-container .box:nth-child(3) .content h3 {
+    color: var(--coreValues);
+}
+
+.mvcv-container .box:nth-child(3):hover .content h3 {
+    color: var(--black1);
+}
+
+.mvcv-container .box .content h3 {
+    font-size: 65px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+
+.mvcv-container .box:hover .content h3 {
+    text-shadow: 3px 3px 0 var(--white1);
+}
+
+.mvcv-container .box .content p {
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 35px;
+    color: var(--paracolor);
+    transition: 0.5s;
+}
+
+.mvcv-container .box:hover .content p {
+    color: var(--black1);
+}
+
+/* -------------
+   BREAKPOINTS
+-------------- */
+@media screen and (max-width: 1250px) {
+    .mvcv-container .box {
+        width: 500px;
+        height: 450px;
+        margin: 30px;
+    }
+    
+    .mvcv-container .box .icon {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        font-size: 35px;
+    }
+
+    .mvcv-container .box .content h3 {
+        font-size: 45px;
+    }
+
+    .mvcv-container .box .content p {
+        font-size: 16px;
+    }
+}
+
+
+
+/* -------------
+   CONTACT US
+------------- */ 
+.contactus {
+	width: 100%;
+	height: 250px;
+	background: var(--black1);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.contactus p {
+	color: var(--white1);
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 25px;
+}
+
+.contactus .btn-fdbck {
+	background-color: var(--black2);
+	color: var(--white1);
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 13px 30px;
+	border-radius: 30px;
+	transition: 0.3s;
+}
+
+.contactus .btn-fdbck:hover {
+	background-color: transparent;
+	border: 2px solid var(--black3);
+	cursor: pointer;
+}
+
+/* -------------
+   BREAKPOINTS
+-------------- */
+@media (max-width: 610px) {
+    .contactus p {
+        font-size: 26px;
+        text-align: center;
+    }
+
+	.contactus .btn-fdbck {
+		font-size: 16px;
+		padding: 10px 20px;
+	}
+}

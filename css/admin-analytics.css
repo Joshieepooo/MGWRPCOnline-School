@@ -1,0 +1,163 @@
+/* -------------
+    SHORTCUTS
+-------------- */
+:root {
+    --mgwrpcMain1: #8C52FF; 
+    --mgwrpcMain2: #FF914D;
+    --black1: #000;
+    --black2: #151515;
+    --black3: #303030;
+    --gray1: #222;
+    --gray2: #333;
+    --gray3: #444;
+    --white1: #ffffff;
+    --white2: #F2EFEB;
+    --white3: #dddddd;
+    --paracolor: #5e6c79;
+}
+
+
+
+/* -------------
+     CHARTS
+-------------- */
+.chartSection {
+    margin-bottom: 70px;
+    padding-top: 50px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    background-color: var(--black1); 
+}
+
+.chartSection2 {
+    margin-bottom: 70px;
+    padding-top: 50px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    background-color: var(--black2); 
+}
+
+.chartSection3 {
+    padding-top: 50px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    background-color: var(--black1); 
+}
+
+.chartBox {
+    width: 65%;
+    height: 650px;
+    padding: 30px;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid var(--white1); 
+    border-radius: 10px;
+    background-color: var(--black1);
+}
+
+.chartBox2 {
+    width: 65%;
+    height: 650px;
+    padding: 30px;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid var(--white1); 
+    border-radius: 10px;
+    background-color: var(--black2);
+}
+
+.chartBox3 {
+    width: 65%;
+    height: 650px;
+    padding: 30px;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid var(--white1); 
+    border-radius: 10px;
+    background-color: var(--black1);
+}
+
+.chartLabel h1 {
+    padding-top: 110px;
+    font-size: 3em;
+    color: var(--white1);
+    text-align: center;
+    max-width: 700px;
+    margin: auto auto 20px;
+    margin-top: -100px;
+    cursor: default;
+    margin-bottom: 20px;
+}
+
+.selectBox,
+.selectBox2,
+.selectBox3 {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    transition: 0.3s;
+    width: 100%;
+}
+
+#productReserve, #productReserve2, #productReserve3 {
+    width: 200px;
+}
+
+#productReserve:hover, #productReserve2:hover, #productReserve3:hover {
+    transform: scale(1.09);
+}
+
+.selectBox select,
+.selectBox2 select,
+.selectBox3 select {
+    background-color: var(--black2);
+    color: var(--white1);
+    border: 1px solid var(--white1);
+    left: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.selectBox select:focus,
+.selectBox2 select:focus,
+.selectBox3 select:focus {
+    outline: none;
+    border-color: var(--mgwrpcMain1);
+}
+
+/* -------------
+   BREAKPOINTS
+-------------- */
+@media screen and (max-width: 480px) {
+    .chartBox {
+        width: 90%;
+        height: 450px;
+        padding: 20px;
+        border: 2px solid var(--white1); 
+        background-color: var(--black1);
+    }
+    
+    .chartBox2 {
+        width: 90%;
+        height: 450px;
+        padding: 20px;
+        margin: 0 auto;
+        text-align: center;
+        border: 2px solid var(--white1); 
+        border-radius: 10px;
+        background-color: var(--black2);
+    }
+    
+    .chartBox3 {
+        width: 90%;
+        height: 450px;
+        padding: 20px;
+        margin: 0 auto;
+        text-align: center;
+        border: 2px solid var(--white1); 
+        border-radius: 10px;
+        background-color: var(--black1);
+    }
+}

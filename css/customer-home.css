@@ -1,0 +1,1557 @@
+/* ------------
+   SHORTCUTS
+------------ */
+:root {
+    --mgwrpcMain1: #8C52FF; 
+    --mgwrpcMain2: #FF914D;
+    --black1: #000;
+    --black2: #151515;
+    --black3: #303030;
+    --gray1: #222;
+    --gray2: #333;
+    --gray3: #444;
+    --white1: #ffffff;
+    --white2: #F2EFEB;
+    --white3: #dddddd;
+    --paracolor: #5e6c79;
+}
+
+
+
+/* -------------
+   PROMOTION
+------------- */ 
+.slider-container {
+    position: relative;
+    z-index: 1; 
+    padding: 0 0 50px 0;
+}
+
+.slider {
+    width: calc(100vw - 20px); 
+    height: calc(100vh - 80px); 
+    margin: auto;
+    position: relative;
+    overflow: hidden; 
+}
+
+.slider .list {
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+
+.slider .list .item {
+    width: 100%; 
+    height: 95%; 
+    flex-shrink: 0;
+}
+
+.slider .list img {
+    width: 100%; 
+    height: auto; 
+    max-height: 100%; 
+    object-fit: contain; 
+    display: block; 
+    margin: auto;
+}
+
+.slider .buttons,
+.slider .dots {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.slider .buttons {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider .buttons button{
+    width: 50px;
+    height: 50px;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.slider .dots{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.slider .dots li.active{
+    width: 30px;
+}
+
+.slider .item img {
+    width: 100%; 
+    height: auto; 
+    display: block;
+}
+
+.slider .list .item {
+    position: relative;
+}
+
+/* -------------
+   BREAKPOINTS
+------------- */ 
+@media screen and (max-width: 1750px) {
+    .slider{
+        height: 820px;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .slider{
+        height: 800px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .slider{
+        height: 760px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .slider{
+        height: 710px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .slider{
+        height: 660px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .slider{
+        height: 610px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .slider{
+        height: 560px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .slider{
+        height: 510px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .slider{
+        height: 460px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .slider{
+        height: 410px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .slider{
+        height: 360px;
+    }
+
+	.slider .buttons button{
+	    width: 40px;
+	    height: 40px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+    .slider{
+        height: 310px;
+    }
+
+	.slider .buttons button{
+	    width: 35px;
+	    height: 35px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+    .slider{
+        height: 260px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .slider{
+        height: 210px;
+    }
+
+	.slider .buttons button{
+	    width: 30px;
+	    height: 30px;
+	}
+}
+
+
+
+/* -------------
+ SULIT SECTIONS
+-------------- */
+.sulitPc, .sulitPrinter {
+    background: var(--black2);
+}
+
+.sulitLaptop, .otherAcc {
+    background: var(--black1);
+}
+
+.text-center h2{
+	padding-top: 50px;
+    font-size: 3em;
+    color: var(--white1);
+	text-align: center;
+	max-width: 700px;
+	margin: auto auto 20px;
+    cursor: default;
+}
+
+.sentence1 {
+	text-align: center;
+    color: var(--paracolor);
+    font-size: 1.1rem;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+	max-width: 800px;
+	margin: auto;
+    cursor: default;
+}
+
+.sulitPcContents, .sulitLaptopContents, .sulitPrinterContents {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+    text-align: center;
+    padding-bottom: 100px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.row {
+    position: relative;
+    border-radius: 12px;
+    cursor: default;
+}
+
+.row img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    transition: transform 0.5s;
+    transition: 0.3s;
+}
+
+.row img:hover {
+    transform: scale(0.97);
+}
+
+.row h4, .row h5, .row h6 {
+    text-align: center;
+    font-weight: 400;
+    font-family: 'ManifoldCF', sans-serif;
+    transition: all .50s ease;
+    cursor: default;
+} 
+
+.row h4 {
+    font-size: 18px;
+    color: var(--paracolor);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.row h5 {
+    color: var(--white1);
+    font-size: 22px;
+}
+
+.row h6 {
+    color: var(--white1);
+    font-size: 22px;
+}
+
+.row h5:hover {
+    color: var(--mgwrpcMain2);
+    scale: 1.09;
+}
+
+.row .product {
+    width: 80%;
+}
+
+.shortcut {
+	width: 100%;
+	height: 10px;
+	background: none;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.shortcut2 {
+    width: 100%;
+	height: 10px;
+	background: none;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.otherAcc {
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    align-items: center;
+    gap: 3rem;
+	padding-top: 80px;
+    text-align: center;
+    padding-bottom: 100px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.btn-fdbck-other {
+    width: 250px;
+	text-align: center;
+	background-color: var(--black2);
+	color: var(--white1);
+	text-decoration: none;
+	border: 2px solid transparent;
+    font-size: 16px;
+	font-weight: bold;
+	padding: 13px 30px;
+	border-radius: 10px;
+	transition: 0.3s;
+	margin-left: 50px;
+	margin-right: 50px;
+	align-content: center;
+}
+
+.btn-fdbck-other:hover {
+	background-color: transparent;
+	border: 2px solid var(--black3);
+	cursor: pointer;
+}
+
+.btn-fdbck {
+	width: 250px;
+	text-align: center;
+	background-color: var(--black1);
+	color: var(--white1);
+	text-decoration: none;
+	border: 2px solid transparent;
+    font-size: 16px;
+	font-weight: bold;
+	padding: 13px 30px;
+	border-radius: 10px;
+	transition: 0.3s;
+    margin-bottom: 90px;
+	margin-left: 50px;
+	margin-right: 50px;
+	align-content: center;
+}
+
+.btn-fdbck:hover {
+	background-color: transparent;
+	border: 2px solid var(--black3);
+	cursor: pointer;
+}
+
+.btn-fdbck2 {
+	width: 250px;
+	text-align: center;
+	background-color: var(--black2);
+	color: var(--white1);
+	text-decoration: none;
+	border: 2px solid transparent;
+    font-size: 16px;
+	font-weight: bold;
+	padding: 13px 30px;
+	border-radius: 10px;
+	transition: 0.3s;
+    margin-bottom: 90px;
+	margin-left: 50px;
+	margin-right: 50px;
+	align-content: center;
+}
+
+.btn-fdbck2:hover {
+	background-color: transparent;
+	border: 2px solid var(--black3);
+	cursor: pointer;
+}
+
+.reserve1 {
+	background-color: var(--black1);
+	color: var(--white1);
+}
+
+.reserve1:hover {
+	background-color: transparent;
+	border: 2px solid var(--black3);
+	cursor: pointer;
+}
+
+.reserve2 {
+	background-color: var(--black2);
+	color: var(--white1);
+}
+
+.reserve2:hover {
+	background-color: transparent;
+	border: 2px solid var(--black3);
+	cursor: pointer;
+}
+
+.reserve3 {
+	background-color: var(--black1);
+	color: var(--white1);
+}
+
+.reserve3:hover {
+	background-color: transparent;
+	border: 2px solid var(--black3);
+	cursor: pointer;
+}
+
+/* -------------
+   BREAKPOINTS
+------------- */ 
+@media screen and (max-width: 1115px) {
+	.sulitPcContents, .sulitLaptopContents, .sulitPrinterContents {
+	    display: flex;
+		flex-direction: column;
+	    margin-left: 10px;
+	    margin-right: 10px;
+	}
+	
+	.row img{
+		width: 50%;
+		margin-top: -30px;
+	}
+
+	.row h4 {
+	    font-size: 20px;
+	}
+	
+	.row h5 {
+	    font-size: 24px;
+	}
+	
+	.row h6 {
+	    font-size: 24px;
+		margin-bottom: 20px;
+	}
+
+    .btn-fdbck-other {
+		margin-left: 5px;
+		margin-right: 5px;
+		width: 350px;
+		height: 80px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+    .text-center h2{
+        font-size: 2.5em;
+    }
+
+    .sentence1 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sentence1 {
+        font-size: 1.1rem;
+        text-align: center;
+        margin: 0 15px 0 15px;
+    }
+
+	.row img{
+		width: 60%;
+		margin-top: -30px;
+	}
+
+	.btn-fdbck {
+		width: 350px;
+	    font-size: 14px;
+		padding: 10px;
+	    margin-bottom: 100px;
+	}
+
+	.btn-fdbck2 {
+		width: 350px;
+	    font-size: 14px;
+		padding: 10px;
+	    margin-bottom: 100px;
+	}
+
+    .btn-fdbck-other {
+		margin-left: 20px;
+		margin-right: 20px;
+		margin-top: 100px;
+		width: 400px;
+		height: 80px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.row h4 {
+	    font-size: 16px;
+	}
+	
+	.row h5 {
+	    font-size: 20px;
+	}
+	
+	.row h6 {
+	    font-size: 20px;
+		margin-bottom: 20px;
+	}
+
+	.btn-fdbck {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+
+	.btn-fdbck2 {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}
+
+@media screen and (max-width: 560px) {
+	.btn-fdbck {
+		width: 400px;
+		height: 80px;
+	}
+
+	.btn-fdbck2 {
+		width: 400px;
+		height: 80px;
+	}
+
+	.btn-fdbck-other {
+		width: 400px;
+		height: 80px;
+	}
+
+    .otherAcc {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+
+
+/* -------------
+      POPUP
+-------------- */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.modal-content.pcmodal {
+    position: absolute;
+    top: 33.25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 550px;
+    height: 760px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content.laptopmodal {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 550px;
+    height: 760px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content.printermodal {
+    position: absolute;
+    top: 74%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 550px;
+    height: 760px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content.othersmodal {
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 550px;
+    height: 760px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content h2 {
+    color: var(--black1);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.modal-content label {
+    color: var(--black1);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-content input[type="email"],
+.modal-content input[type="contactNum"],
+.modal-content input[type="fname"],
+.modal-content input[type="lname"],
+.modal-content input[type="number"],
+.modal-content input[type="tel"],
+.modal-content input[type="pname"],
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.modal-content input[type="email"]::placeholder,
+.modal-content input[type="contactNum"]::placeholder,
+.modal-content input[type="fname"]::placeholder,
+.modal-content input[type="lname"]::placeholder,
+.modal-content input[type="number"]::placeholder,
+.modal-content input[type="tel"]::placeholder,
+.modal-content input[type="pname"] {
+    color: var(--black3);
+    opacity: 0.6;
+}
+
+.modal-content input[type="email"],
+.modal-content input[type="contactNum"],
+.modal-content input[type="fname"],
+.modal-content input[type="lname"],
+.modal-content input[type="number"],
+.modal-content input[type="tel"],
+.modal-content input[type="pname"] {
+    background-color: var(--white1);
+    color: var(--black1);
+    border: 1px solid var(--black1);
+}
+
+.modal-content button {
+    background-color: var(--black1);
+    color: var(--white1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 48%;
+    justify-content: space-between; 
+    margin: 0 10px  0 10px;
+}
+
+.modal-content button:hover {
+    background-color: var(--black3);
+}
+
+.btn-container { 
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px; 
+}
+
+.modal-content.pcmodal2 {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 480px;
+    height: 300px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+	align-content: center;
+}
+
+.modal-content.laptopmodal2 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 480px;
+    height: 300px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+	align-content: center;
+}
+
+.modal-content.printermodal2 {
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 480px;
+    height: 300px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+	align-content: center;
+}
+
+.modal-content.othersmodal2 {
+    position: absolute;
+    top: 82%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 480px;
+    height: 300px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+	align-content: center;
+}
+
+#successModal .modal-content {
+    display: flex;
+    flex-direction: column;
+    width: 500px; 
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+#successModal .modal-content button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%; 
+}
+
+/* -------------
+   BREAKPOINTS
+-------------- */
+@media screen and (max-width: 1750px) {
+	.modal-content.pcmodal {
+        margin-top: 2.5%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: 0.5%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: -0.5%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 1.8%;
+    }
+}
+
+@media screen and (max-width: 1690px) {
+	.modal-content.pcmodal {
+        margin-top: 3.8%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: 2.5%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 1.8%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 4.7%;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+	.modal-content.pcmodal {
+        margin-top: 3%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: 1.2%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 0.7%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 4.3%;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+	.modal-content.pcmodal {
+        margin-top: 1%;
+    }
+	
+	.modal-content.laptopmodal {
+        margin-top: 1.1%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 0.1%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 3%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+	.modal-content.pcmodal {
+        margin-top: 0.5%;
+    }
+	
+	.modal-content.laptopmodal {
+        margin-top: -2%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: -2%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 2%;
+    }
+}
+
+@media screen and (max-width: 1362px) {
+	.modal-content.pcmodal {
+        margin-top: -1.8%;
+    }
+	
+	.modal-content.laptopmodal {
+        margin-top: -4.7%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: -5.8%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 0.2%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+	.modal-content.pcmodal {
+        margin-top: -3.5%;
+    }
+	
+	.modal-content.laptopmodal {
+        margin-top: -6.7%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: -7.5%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: -3%;
+    }
+}
+
+@media screen and (max-width: 1298px) {
+	.modal-content.pcmodal {
+        margin-top: -5.2%;
+    }
+	
+	.modal-content.laptopmodal {
+        margin-top: -8.5%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: -9.5%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: -3%;
+    }
+}
+
+@media screen and (max-width: 1297px) {
+	.modal-content.pcmodal {
+        margin-top: -8%;
+    }
+	
+	.modal-content.laptopmodal {
+        margin-top: -12.9%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: -15.2%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: -9.5%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+	.modal-content.pcmodal {
+        margin-top: -11.5%;
+    }
+	
+	.modal-content.laptopmodal {
+        margin-top: -16.9%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: -19.2%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: -12.5%;
+    }
+}
+
+@media screen and (max-width: 1220px) {
+	.modal-content.pcmodal {
+        margin-top: -8.9%;
+    }
+	
+	.modal-content.laptopmodal {
+        margin-top: -14.4%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: -17.5%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: -11%;
+    }
+}
+
+@media screen and (max-width: 1115px) {
+	.modal-content.pcmodal {
+        margin-top: -2.9%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: 48.2%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 85%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 59.5%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+	.modal-content.pcmodal {
+        margin-top: -3.9%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: 47.5%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 84.4%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 58.9%;
+    }
+}
+
+@media screen and (max-width: 1079px) {
+	.modal-content.pcmodal {
+        margin-top: -6.9%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: 45.9%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 82.4%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 56.9%;
+    }
+}
+
+@media screen and (max-width: 1065px) {
+	.modal-content.pcmodal {
+        margin-top: -9%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: 41.9%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 77%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 58%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+	.modal-content.pcmodal {
+        margin-top: -14%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: 37.5%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 73.8%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 56%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+	.modal-content.pcmodal {
+        margin-top: -19.9%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: 31.9%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 69.7%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 51.5%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+	.modal-content.pcmodal {
+        margin-top: -28%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: 35%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 80%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 63%;
+    }
+}
+
+@media screen and (max-width: 801px) {
+	.modal-content.pcmodal {
+        margin-top: -28%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: 35%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 80%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 49%;
+    }
+}
+
+@media screen and (max-width: 702px) {
+	.modal-content.pcmodal {
+        margin-top: -47%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: 7.7%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 43.8%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+	.modal-content.pcmodal {
+        margin-top: -31%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: 34%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 80%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 61%;
+    }
+
+	.modal-content.pcmodal,
+	.modal-content.laptopmodal,
+	.modal-content.printermodal,
+	.modal-content.othersmodal {
+		width: 80%;
+		height: 9.5%;
+	}
+
+	.modal-content h2 {
+		font-size: 28px;
+	}
+
+	.modal-content label {
+		font-size: 16px;
+	}
+	
+	.modal-content input[type="email"],
+	.modal-content input[type="contactNum"],
+	.modal-content input[type="fname"],
+	.modal-content input[type="lname"],
+	.modal-content input[type="number"],
+	.modal-content input[type="tel"],
+	.modal-content input[type="pname"],
+	.modal-content button {
+	    padding: 8px;
+	    margin-bottom: 10px;
+	    font-size: 14px;
+	}
+	
+	.modal-content button {
+	    width: 45%;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.modal-content.pcmodal {
+        margin-top: -36%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: 28%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 74%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 56%;
+    }
+
+	.modal-content.pcmodal,
+	.modal-content.laptopmodal,
+	.modal-content.printermodal,
+	.modal-content.othersmodal {
+		height: 9.8%;
+	}
+
+	.modal-content h2 {
+		margin-bottom: 2px;
+	}
+
+	.modal-content label {
+		font-size: 18px;
+	}
+	
+	.modal-content input[type="email"],
+	.modal-content input[type="contactNum"],
+	.modal-content input[type="fname"],
+	.modal-content input[type="lname"],
+	.modal-content input[type="number"],
+	.modal-content input[type="tel"],
+	.modal-content input[type="pname"],
+	.modal-content button {
+	    font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.modal-content.pcmodal {
+        margin-top: -53%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: 5%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 50%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 33%;
+    }
+
+	.modal-content.pcmodal,
+	.modal-content.laptopmodal,
+	.modal-content.printermodal,
+	.modal-content.othersmodal {
+		width: 90%;
+		height: 10.3%;
+	}
+	
+	.modal-content input[type="email"],
+	.modal-content input[type="contactNum"],
+	.modal-content input[type="fname"],
+	.modal-content input[type="lname"],
+	.modal-content input[type="number"],
+	.modal-content input[type="tel"],
+	.modal-content input[type="pname"],
+	.modal-content button {
+	    font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 591px) {
+	.modal-content.pcmodal {
+        margin-top: -55%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: 0%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 45%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 30%;
+    }
+
+	.modal-content.pcmodal,
+	.modal-content.laptopmodal,
+	.modal-content.printermodal,
+	.modal-content.othersmodal {
+		width: 90%;
+	}
+	
+	.modal-content button {
+	    width: 40%;
+	}
+}
+
+@media screen and (max-width: 589px) {
+	.modal-content.pcmodal {
+        margin-top: -63%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: -9%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 35%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 15%;
+    }
+}
+
+@media screen and (max-width: 588px) {
+	.modal-content.pcmodal {
+        margin-top: -49%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: 15%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 65%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 38%;
+    }
+
+	.modal-content.pcmodal,
+	.modal-content.laptopmodal,
+	.modal-content.printermodal,
+	.modal-content.othersmodal{
+		height: 11%;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.modal-content.pcmodal {
+        margin-top: -51%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: 12%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 59%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 49%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+	.modal-content.pcmodal {
+        margin-top: -74%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: 5%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 40%;
+    }
+
+	.modal-content.othersmodal {
+        margin-top: 49%;
+    }
+
+	.modal-content.pcmodal,
+	.modal-content.laptopmodal,
+	.modal-content.printermodal,
+	.modal-content.othersmodal{
+		height: 11.4%;
+	}
+
+	.modal-content button {
+		font-size: 14px;
+	    width: 40%;
+	}
+}
+
+@media screen and (max-width: 518px) {
+	.modal-content.pcmodal {
+        margin-top: -79%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: 0%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 34%;
+    }
+
+	.modal-content.pcmodal,
+	.modal-content.laptopmodal,
+	.modal-content.printermodal,
+	.modal-content.othersmodal{
+		height: 12%;
+	}
+}
+
+@media screen and (max-width: 507px) {
+	.modal-content.pcmodal {
+        margin-top: -84%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: -3%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 34%;
+    }
+
+	.modal-content h2 {
+		font-size: 20px;
+		margin-bottom: 5px;
+	}
+
+	.modal-content label {
+		font-size: 16px;
+	}
+	
+	.modal-content input[type="email"],
+	.modal-content input[type="contactNum"],
+	.modal-content input[type="fname"],
+	.modal-content input[type="lname"],
+	.modal-content input[type="number"],
+	.modal-content input[type="tel"],
+	.modal-content input[type="pname"],
+	.modal-content button {
+	    font-size: 14px;
+	}
+
+	.modal-content.pcmodal,
+	.modal-content.laptopmodal,
+	.modal-content.printermodal,
+	.modal-content.othersmodal{
+		width: 80%;
+		height: 12%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.modal-content.pcmodal {
+        margin-top: -88%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: -8%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 28%;
+    }
+
+	.modal-content.pcmodal,
+	.modal-content.laptopmodal,
+	.modal-content.printermodal,
+	.modal-content.othersmodal{
+		width: 90%;
+		height: 11%;
+	}
+}
+
+@media screen and (max-width: 476px) {
+	.modal-content.pcmodal {
+        margin-top: -88%;
+    }
+
+	.modal-content.laptopmodal {
+        margin-top: -8%;
+    }
+
+	.modal-content.printermodal {
+        margin-top: 28%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+	.modal-content.pcmodal,
+	.modal-content.laptopmodal,
+	.modal-content.printermodal,
+	.modal-content.othersmodal{
+		height: 11%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.modal-content.pcmodal,
+	.modal-content.laptopmodal,
+	.modal-content.printermodal,
+	.modal-content.othersmodal{
+		height: 12%;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	.modal-content.pcmodal,
+	.modal-content.laptopmodal,
+	.modal-content.printermodal,
+	.modal-content.othersmodal{
+		height: 12%;
+	}
+}
+
+@media screen and (max-width: 330px) {
+	.modal-content.pcmodal,
+	.modal-content.laptopmodal,
+	.modal-content.printermodal,
+	.modal-content.othersmodal{
+		height: 12%;
+	}
+}

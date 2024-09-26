@@ -1,0 +1,445 @@
+/* --------------
+    SHORTCUTS
+-------------- */
+:root {
+    --mgwrpcMain1: #8C52FF; 
+    --mgwrpcMain2: #FF914D;
+    --black1: #000;
+    --black2: #151515;
+    --black3: #303030;
+    --gray1: #222;
+    --gray2: #333;
+    --gray3: #444;
+    --white1: #ffffff;
+    --white2: #F2EFEB;
+    --white3: #dddddd;
+    --paracolor: #5e6c79;
+}
+
+
+
+/* --------------
+    INVENTORY
+-------------- */
+.table {
+    width: 100%;
+    height: 80vh;
+    background-color: transparent;
+    justify-content: center !important;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+section{
+    margin: 2rem 0;
+}
+
+#sortTotalUnitsButton {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+    outline: inherit;
+}
+
+.sticky-header thead th {
+    position: sticky;
+    top: 0;
+    background-color: #151515;
+    z-index: 1;
+}
+
+.sticky-header thead th {
+    padding: 10px;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+}
+
+.table__header {
+    padding: 50px 40px;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white1);
+    transition: 0.3s;
+}
+
+.table__header .input-group {
+    width: 35%;
+    position: relative;
+    padding: 0 15px;
+    background-color: #fff5;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.table__header .input-group:hover {
+    width: 45%;
+    background-color: #fff8;
+    box-shadow: 0 .1rem .4rem #0002;
+}
+
+.table__header .input-group img {
+    cursor: pointer;
+    width: 30px;
+    position: absolute;
+    right: 20px;
+}
+
+.table__header .input-group input {
+    padding: 20px 30px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.table__body {
+    width: 100%;
+    max-height: calc(89% - 1.6rem);
+    background-color: var(--white3);
+    margin: .8rem auto;
+    overflow: overlay;
+    display: flex;
+}
+
+.table__body td {
+    text-align: center;
+    align-content: center;
+}
+
+.table__body th {
+    text-align: center;
+    background-color: var(--gray2);
+    color: var(--white1);
+}
+
+.table__body td:first-child {
+    width: 8%;
+}
+   
+.table__body td:nth-child(2) {
+    width: 30%; 
+}
+
+.table__body td:nth-child(3) {
+    width: 30%; 
+}
+
+.table__body td:nth-child(4) {
+    width: 10%; 
+}
+
+.table__body td:nth-child(5) {
+    width: 10%; 
+}
+
+.table__body td:nth-child(6) {
+    width: 12%; 
+}
+
+.table__body td:nth-child(7) {
+    width: 5%; 
+}
+
+.table__body::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--gray3);
+}
+   
+.table__body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: var(--gray2);
+    visibility: hidden;
+}
+   
+.table__body:hover::-webkit-scrollbar-thumb{ 
+    visibility: visible;
+}
+
+table {
+    width: 100%;
+    background-color: var(--white3); 
+}
+
+td img {
+    width: 40px;
+    height: 40px;
+    margin-right: .5rem;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: left;
+}
+
+thead th {
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: .3s ease-in-out;
+}
+
+tbody tr td,
+tbody tr td p,
+tbody tr td img {
+    transition: .2s ease-in-out;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+tr.low-stock {
+    background-color: #EB616C;
+}
+
+/* Orange background for medium stock */
+tr.medium-stock {
+    background-color: #EE964B;
+}
+
+.status.post {
+    background-color: #86e49d;
+    color: #006b21;
+}
+
+.status.delete {
+    background-color: #d893a3;
+    color: #b30021;
+}
+
+.status.post:hover {
+    background-color: var(--white3);
+    color: var(--black1);
+}
+
+.status.delete:hover {
+    background-color: var(--white3);
+    color: var(--black1);
+}
+
+/* --------------
+      MODALS
+-------------- */
+.modal {
+	align-content: center;
+    align-items: center;
+}
+
+.fade {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100vh;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9); 
+    z-index: 1; 
+    overflow-y: auto; 
+    padding: 20px;
+	align-content: center;
+    align-items: center;
+}
+
+.modal-header {
+    width: 100%;
+}
+
+.modal-body {
+    width: 100%;
+
+}
+
+.fade {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* --------------
+     BUTTONS
+-------------- */
+.add {
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    font-size: 14px;
+	background-color: var(--white1);
+	color: var(--black1);
+	text-decoration: none;
+	border: 2px solid var(--black1);
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 10px;
+	transition: 0.3s;
+}
+
+.add:hover {
+    background-color: transparent;
+	border: 2px solid var(--white1);
+    color: var(--white1);
+	cursor: pointer;
+}
+
+.action {
+    display: flex;
+    width: 200px;
+    justify-content: center;
+    font-size: 14px;
+	background-color: var(--black2);
+	color: var(--white1);
+	text-decoration: none;
+	border: 2px solid var(--black1);
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 10px;
+	transition: 0.3s;
+    margin-top: 20px;
+}
+
+.action.sulitbuttons {
+    font-size: 14px;
+	background-color: var(--black2);
+	color: var(--white1);
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 10px;
+	transition: 0.3s;
+    margin-top: 20px;
+}
+
+.action.sulitbuttons:hover {
+    background-color: transparent;
+	border: 2px solid var(--black3);
+    color: var(--black1);
+	cursor: pointer;
+}
+
+.action.updateproduct {
+    font-size: 14px;
+	background-color: var(--black2);
+	color: var(--white1);
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 10px;
+	transition: 0.3s;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.action.updateproduct:hover {
+    background-color: transparent;
+	border: 2px solid var(--black3);
+    color: var(--black1);
+	cursor: pointer;
+}
+
+.action.closebtn {
+    font-size: 14px;
+	background-color: var(--black2);
+	color: var(--white1);
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 10px;
+	transition: 0.3s;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.action.closebtn:hover {
+    background-color: transparent;
+	border: 2px solid var(--black3);
+    color: var(--black1);
+	cursor: pointer;
+}
+
+.action.save {
+    font-size: 14px;
+	background-color: var(--black2);
+	color: var(--white1);
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 10px;
+	transition: 0.3s;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.action.save:hover {
+    background-color: transparent;
+	border: 2px solid var(--black3);
+    color: var(--black1);
+	cursor: pointer;
+}
+
+.status {
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    font-size: 14px;
+	background-color: var(--black2);
+	color: var(--white1);
+	text-decoration: none;
+	border: 2px solid var(--black1);
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 10px;
+	transition: 0.3s;
+    text-align: center;
+    align-content: center;
+}
+
+/* -------------
+   BREAKPOINTS
+-------------- */
+@media (max-width: 1000px) {
+    h1 {
+        display: none;
+    }
+
+    .table__header .input-group {
+        width: 60%;
+        margin-left: -16px;
+    }
+
+    .table__header .input-group:hover {
+        width: 60%;
+    }
+    
+    tbody tr td,
+    tbody tr td p,
+    tbody tr td img {
+        transition: .2s ease-in-out;
+        text-align: left;
+    }
+
+    thead th span.icon-arrow {
+        display: none;
+    }
+
+    td:not(:first-of-type) {
+        min-width: 12.1rem;
+    }
+}

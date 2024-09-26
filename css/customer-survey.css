@@ -1,0 +1,333 @@
+/* -------------
+    SHORTCUTS
+-------------- */
+:root {
+    --mgwrpcMain1: #8C52FF; 
+    --mgwrpcMain2: #FF914D;
+    --black1: #000;
+    --black2: #151515;
+    --black3: #303030;
+    --gray1: #222;
+    --gray2: #333;
+    --gray3: #444;
+    --white1: #ffffff;
+    --white2: #F2EFEB;
+    --white3: #dddddd;
+    --paracolor: #5e6c79;
+}
+
+/* -------------
+     RESETS
+-------------- */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--black1);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    position: relative; 
+}
+
+
+
+/* -------------
+      FORM
+-------------- */
+.heading {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#subheading, #content, form {
+    color: var(--white1);
+}
+
+.logo {
+    width: 280px;
+    height: auto;
+    transition: 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.logo:hover {
+    transform: scale(1.06);
+}
+
+#subheading {
+    text-align: center;
+    color: var(--paracolor);
+    font-size: 1.1rem;
+    line-height: 1.5em;
+	max-width: 700px;
+	margin: auto auto 20px;
+    margin-bottom: 50px;
+    cursor: default;
+}
+
+#content1 {
+    width: 90%;
+    margin: auto;
+    color: var(--paracolor);
+}
+
+form {
+    background-color: rgba(29, 29, 29, 0.7);
+    padding-top: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55%;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 10px;
+    padding-bottom: 60px;
+    margin-bottom: 50px;
+}
+
+form .box {
+    width: 100%;
+    border: none;
+    font-size: .9rem;
+    padding: 1em;
+    outline: none;
+    background-color: var(--black2);    
+    color: var(--white1);
+    border-radius: 10px;
+    border: 1px solid rgb(53, 53, 53);
+    margin-bottom: 1em;
+    font-size: 1.1em;
+}
+
+textarea {
+    width: 100%; 
+    height: 125px;
+    resize: vertical;
+    border: none;
+    font-size: .9rem;
+    padding: 1em;
+    outline: none;
+    background-color: var(--black2);    
+    color: var(--white1);
+    border-radius: 10px;
+    border: 1px solid rgb(53, 53, 53);
+    margin-bottom: 1em;
+    font-size: 1.1em;
+}
+
+#content1 textarea:focus {
+    border: 1px solid var(--mgwrpcMain1);
+    color: var(--white1)
+}
+
+#content1 textarea:not(:placeholder-shown) {
+    color: var(--mgwrpcMain1)
+}
+
+#content1 textarea:focus {
+    border: 1px solid var(--mgwrpcMain1);
+    color: var(--white1)
+}
+
+#content1 textarea:not(:placeholder-shown) {
+    color: var(--mgwrpcMain1)
+}
+
+#content1 textarea::placeholder {
+    font-size: 1.1em;
+    position: relative;
+    width: 100%;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+
+#content1 textarea:hover::placeholder {
+    color: var(--mgwrpcMain1); 
+}
+
+button {
+    width: 100%;
+    height: 2.5em;
+    position: relative;
+    top: 11px;
+    background-color: var(--black3);
+    border: none;
+    color: var(--white1);
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-size: 1.1em;
+}
+
+button:hover {
+    background-color: var(--black1);
+}
+
+input:focus {
+    border: 1px solid var(--mgwrpcMain1);
+    color: var(--white1)
+}
+
+input:not(:placeholder-shown) {
+    color: var(--mgwrpcMain1)
+}
+
+input:focus {
+    border: 1px solid var(--mgwrpcMain1);
+    color: var(--white1)
+}
+
+input:not(:placeholder-shown) {
+    color: var(--mgwrpcMain1)
+}
+
+input::placeholder {
+    font-size: 1.1em;
+    position: relative;
+    width: 80%;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+
+input:hover::placeholder {
+    color: var(--mgwrpcMain1); 
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+input[type="radio"]:hover {
+    transform: scale(1.3);
+}
+
+input[type="radio"].radio-btn {
+    accent-color:var(--black1);
+}
+
+input[type="radio"].radio-btn:checked {
+    accent-color: var(--mgwrpcMain1);
+    transition: 0.8s;
+}
+
+.radio-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+  
+.radio-btn {
+    margin-right: 20px;
+    accent-color: var(--black1); 
+    transition: 1s;
+}
+  
+.radio-text {
+    color: var(--paracolor);
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+  
+.radio-btn:hover + .radio-text {
+    color: var(--mgwrpcMain1); 
+}
+
+.radio-btn:checked + .radio-text {
+    color: var(--mgwrpcMain1); 
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:hover {
+    transform: scale(1.3);
+}
+
+input[type="checkbox"].radio-btn {
+    accent-color:var(--black1);
+}
+
+input[type="checkbox"].radio-btn:checked {
+    accent-color: var(--mgwrpcMain1);
+    transition: 0.8s;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox-btn {
+    margin-right: 30px;
+    accent-color: var(--white1); 
+    transition: 1s;
+}
+
+.checkbox-text {
+    color: var(--paracolor);
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.checkbox-btn:hover + .checkbox-text {
+    color: var(--mgwrpcMain1); 
+}
+
+.checkbox-btn:checked + .checkbox-text {
+    color: var(--mgwrpcMain1); 
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--mgwrpcMain1); 
+    font-size: 1.1em;
+    transition: background-color 5000s ease-in-out 0s; 
+}
+
+/* -------------
+   BREAKPOINTS
+-------------- */
+@media (max-width: 1280px) {
+    form {
+        width: 75%;
+    }
+}
+
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+    }
+
+    #subheading {
+        width: 80%;
+    }
+}

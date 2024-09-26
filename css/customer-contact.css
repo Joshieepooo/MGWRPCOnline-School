@@ -1,0 +1,259 @@
+/* -------------
+      IMPORT
+-------------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&display=swap');
+
+/* -------------
+    SHORTCUTS
+-------------- */
+:root {
+    --mgwrpcMain1: #8C52FF; 
+    --mgwrpcMain2: #FF914D;
+    --black1: #000;
+    --black2: #151515;
+    --black3: #303030;
+    --gray1: #222;
+    --gray2: #333;
+    --gray3: #444;
+    --white1: #ffffff;
+    --white2: #F2EFEB;
+    --white3: #dddddd;
+    --paracolor: #5e6c79;
+}
+
+
+
+/* -------------
+   CONTACT US
+-------------- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    max-width: 1080px;
+    margin: auto;
+}
+
+.heading {
+	padding-top: 110px;
+    font-size: 3em;
+    color: var(--white1);
+	text-align: center;
+	max-width: 700px;
+	margin: auto auto 20px; 
+    margin-top: -100px;
+	margin-bottom: 10px;
+    cursor: default;
+}
+
+.sub-heading {
+    text-align: left;
+    margin-bottom: .5em;
+    font-weight: bold;
+    color: #fff;
+    cursor: default;
+}
+
+.contactForm {
+    display: grid;
+    gap: 3em;
+    margin-top: 20px;
+}
+
+.cForm {
+    width: 100%;
+}
+
+.sentence1 {
+	text-align: center;
+    color: var(--paracolor);
+    font-size: 1.1rem;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+	max-width: 700px;
+	margin: auto auto 20px;
+    cursor: default;
+}
+
+.sentence2 {
+    color: var(--paracolor);
+    font-size: 16px;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+    cursor: default;
+}
+
+.senleft {
+    text-align: left;
+}
+
+.input {
+    width: 100%;
+    max-width: 600px;
+    border: none;
+    font-size: .9rem;
+    padding: 1em;
+    outline: none;
+    background-color: var(--black2);    
+    color: var(--white1);
+    border-radius: 10px;
+    border: 1px solid rgb(53, 53, 53);
+    margin-bottom: 1em;
+	resize: vertical;
+}
+
+.input:focus {
+    border: 1px solid var(--mgwrpcMain1);
+    color: var(--white1)
+}
+
+.input:not(:placeholder-shown) {
+    color: var(--mgwrpcMain1)
+}
+
+.input::placeholder {
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+
+.input:hover::placeholder {
+    color: var(--mgwrpcMain1); 
+}
+
+.inputbtn {
+    width: 100%;
+    max-width: 600px;
+    border: none;
+    font-size: .9rem;
+    padding: 1em;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid rgb(53, 53, 53);
+    margin-bottom: 1em;
+}
+
+.submitbtn {
+    background-color: var(--black3);
+    border: none;
+    color: var(--white1);
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.submitbtn:hover {
+    background-color: var(--black2);
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+
+.map {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+}
+
+.map iframe {
+    width: 100%;
+    height: 500%;
+    border-radius: 20px;
+}
+
+.contactMethod {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-bottom: 55px;
+    text-align: left;
+}
+
+.method {
+    display: flex;
+    align-items: center;
+}
+
+.contactIcon {
+    font-size: 30px;
+    color: var(--white1);
+    width: 70px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--mgwrpcMain1); 
+    font-size: 1.1em;
+    transition: background-color 5000s ease-in-out 0s; 
+}
+
+/* -------------
+   BREAKPOINTS
+-------------- */
+@media screen and (max-width: 800px) {
+	.sub-heading, .sentence1 {
+		margin-top: 20px;
+        text-align: center;
+    }
+	
+    .sentence2 {
+        font-size: 14px;
+		text-align: left;
+    }
+
+	.sub-heading {
+		text-align: left;
+	}
+
+    .input {
+        width: 100%;
+        min-width: 420px;
+        margin-bottom: 1em;
+    }
+
+	.map-container {
+	    position: relative;
+	    width: 95%;
+	    height: 100px;
+		margin-left: 35px;
+		margin-bottom: 400px;
+	}
+
+	.contactMethod {
+	    margin-top: 5%;
+	    text-align: left;
+		margin-left: 40px;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .contactForm{
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 0;
+    }
+	
+    .contactMethod{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .mapBg {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+   

@@ -1,0 +1,253 @@
+/* -------------
+    SHORTCUTS
+-------------- */
+:root {
+    --mgwrpcMain1: #8C52FF; 
+    --mgwrpcMain2: #FF914D;
+    --black1: #000;
+    --black2: #151515;
+    --black3: #303030;
+    --gray1: #222;
+    --gray2: #333;
+    --gray3: #444;
+    --white1: #ffffff;
+    --white2: #F2EFEB;
+    --white3: #dddddd;
+    --paracolor: #5e6c79;
+}
+
+
+
+/* -------------
+ FEEDBACKS TABLE
+-------------- */
+.table {
+    background-color: #fff5;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem #0005;
+    border-radius: .8rem;
+    overflow: hidden;
+    width: 80%;
+    height: 860px;
+    overflow: hidden;
+    justify-content: center !important;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.table__header {
+    width: 100%;
+    height: 10%;
+    background-color: #fff4;
+    padding: .8rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: default;
+}
+
+.table__body {
+    width: 98%;
+    max-height: calc(89% - 1.6rem);
+    background-color: #fffb;
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+    overflow: overlay;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: left;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #dddddd;
+    text-transform: capitalize;
+    text-align: center;
+    z-index: 2;
+    cursor: default;
+}
+
+thead th:hover {
+    color: var(--mgwrpcMain1);
+}
+
+thead th:first-child {
+    width: 20%;
+}
+   
+thead th:nth-child(2) {
+    width: 20%; 
+}
+
+thead th:nth-child(3) {
+    width: 20%; 
+}
+
+thead th:nth-child(4) {
+    width: 40%; 
+}
+
+tbody tr {
+    --delay: .1s;
+    transition: .5s ease-in-out var(--delay), background-color 0s;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #0000000b;
+}
+
+tbody tr.hide {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+tbody tr:hover {
+    background-color: #fff6 !important;
+}
+
+tbody td {
+    text-align: center;
+    vertical-align: top;
+}
+
+tbody td:first-child {
+    cursor: default;
+}
+   
+tbody td:nth-child(2) {
+    cursor: default;
+}
+
+tbody td:nth-child(3) {
+    cursor: default;
+}
+
+tbody td:nth-child(4) {
+    cursor: pointer;
+    text-align: justify;
+}
+
+tbody tr td,
+tbody tr td p,
+tbody tr td img {
+    transition: .2s ease-in-out;
+}
+
+tbody tr.hide td,
+tbody tr.hide td p {
+    padding: 0;
+    font: 0 / 0 sans-serif;
+    transition: .2s ease-in-out .5s;
+}
+
+tbody tr.hide td img {
+    width: 0;
+    height: 0;
+    transition: .2s ease-in-out .5s;
+}
+
+.status {
+    width: 100px;
+    padding: .4rem 0;
+    border-radius: 2rem;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid black;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.status.post {
+    background-color: #86e49d;
+    color: #006b21;
+}
+
+.status.delete {
+    background-color: #d893a3;
+    color: #b30021;
+}
+
+.center-content {
+    text-align: center;
+}
+
+.justify-comment {
+    text-align: justify;
+}
+
+.feedback-cell .short-feedback,
+.feedback-cell .full-feedback {
+    line-height: 1.5;
+}
+
+/* -------------
+ TABLE SCROLLBAR 
+-------------- */
+.table__body::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table__body::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+}
+
+.table__body:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+tbody tr.read {
+    background-color: #e0ffe0 !important; /* Light green background for read messages */
+    color: #006400 !important; /* Dark green text for read messages */
+}
+
+tbody tr.unread {
+    background-color: #ffe0e0 !important; /* Light red background for unread messages */
+    color: #8B0000 !important; /* Dark red text for unread messages */
+}
+
+
+/* -------------
+   BREAKPOINTS
+-------------- */
+@media (max-width: 1680px) {
+    td {
+        min-width: 15rem;
+    }
+
+    tbody tr td:first-child {
+        width: 10%;
+    }
+
+    tbody tr td:nth-child(2) {
+        width: 10%;
+    }
+
+    tbody tr td:nth-child(3) {
+        width: 10%;
+    }
+
+    tbody tr td:nth-child(4) {
+        width: 20%;
+    }
+}
+
+@media (max-width: 960px) {
+    td {
+        min-width: 11rem;
+    }
+}
